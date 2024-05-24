@@ -1,0 +1,17 @@
+C:\c#\ProyectoBaguer\persistencia\bin\Debug\net7.0\Data\Csv\RoleUser.csv
+C:\c#\ProyectoBaguer\persistencia\bin\Debug\net7.0\Data\Csv\User.csv
+C:\c#\ProyectoBaguer\persistencia\bin\Debug\net7.0\persistencia.deps.json
+C:\c#\ProyectoBaguer\persistencia\bin\Debug\net7.0\persistencia.dll
+C:\c#\ProyectoBaguer\persistencia\bin\Debug\net7.0\persistencia.pdb
+C:\c#\ProyectoBaguer\persistencia\bin\Debug\net7.0\Dominio.dll
+C:\c#\ProyectoBaguer\persistencia\bin\Debug\net7.0\Dominio.pdb
+C:\c#\ProyectoBaguer\persistencia\obj\Debug\net7.0\persistencia.csproj.AssemblyReference.cache
+C:\c#\ProyectoBaguer\persistencia\obj\Debug\net7.0\persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\ProyectoBaguer\persistencia\obj\Debug\net7.0\persistencia.AssemblyInfoInputs.cache
+C:\c#\ProyectoBaguer\persistencia\obj\Debug\net7.0\persistencia.AssemblyInfo.cs
+C:\c#\ProyectoBaguer\persistencia\obj\Debug\net7.0\persistencia.csproj.CoreCompileInputs.cache
+C:\c#\ProyectoBaguer\persistencia\obj\Debug\net7.0\persistencia.csproj.CopyComplete
+C:\c#\ProyectoBaguer\persistencia\obj\Debug\net7.0\persistencia.dll
+C:\c#\ProyectoBaguer\persistencia\obj\Debug\net7.0\refint\persistencia.dll
+C:\c#\ProyectoBaguer\persistencia\obj\Debug\net7.0\persistencia.pdb
+C:\c#\ProyectoBaguer\persistencia\obj\Debug\net7.0\ref\persistencia.dll

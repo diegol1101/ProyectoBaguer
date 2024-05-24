@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Empleados</title>
+    <link rel="stylesheet" href="/css/Api.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Lista de Empleados Españoles</h2>
+        <table id="employeesTable">
+            <thead>
+                <tr>
+                    <th>Foto</th>
+                    <th>Nombres y Apellidos</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- renderiza la info de los empleados -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- detalle de empleado-->
+    <div id="employeeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="employeeDetails">
+                <!-- se renderiza la info del detalle -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let employeesData = []; // aca se almacena la info par que sea igual el empleado 
+
+        // al momento de entrar a la pagina filtra por pais españa
+        async function loadSpanishEmployees() {
+            const url = 'https://randomuser.me/api/?results=10&nat=es';
+            
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+
+                if (!response.ok) {
+                    throw new Error(data.error || 'Failed to fetch employees.');
+                }
+
+                employeesData = data.results; // me almacena en la variable para que coincidan 
+                displayEmployees(employeesData); // muestra en tabla
+            } catch (error) {
+                console.error('Error fetching employees:', error);
+            }
+        }
+
+    
+        function displayEmployees(employees) {
+            const tableBody = document.querySelector('#employeesTable tbody');
+
+            employees.forEach((employee, index) => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><img src="${employee.picture.thumbnail}" alt="Foto de perfil"></td>
+                    <td>${employee.name.first} ${employee.name.last}</td>
+                    <td><button class="detail-button" onclick="showEmployeeDetails(${index})">Detalle</button></td>
+                `;
+                tableBody.appendChild(row);
+            });
+        }
+
+        // carga el detalle
+        async function showEmployeeDetails(index) {
+            const employee = employeesData[index]; // me trae del almacenado 
+
+            const modal = document.getElementById('employeeModal');
+            const modalContent = document.getElementById('employeeDetails');
+            modal.style.display = 'block';
+            modalContent.innerHTML = `
+                <h2>${employee.name.first} ${employee.name.last}</h2>
+                <p><strong>Género:</strong> ${employee.gender}</p>
+                <img src="${employee.picture.large}" alt="Foto de perfil">
+                <p><strong>Contacto:</strong></p>
+                <ul>
+                    <li><strong>Celular:</strong> ${employee.cell}</li>
+                    <li><strong>Teléfono:</strong> ${employee.phone}</li>
+                    <li><strong>E-mail:</strong> ${employee.email}</li>
+                    <li><strong>Dirección:</strong> ${employee.location.street.number} ${employee.location.street.name}</li>
+                    <li><strong>Pais:</strong> ${employee.location.country}</li>
+                    <li><strong>Estado:</strong> ${employee.location.state}</li>
+                    <li><strong>Ciudad:</strong> ${employee.location.city}</li>
+                    <li><strong>Usuario:</strong> ${employee.login.username}</li>
+                </ul>
+            `;
+        }
+
+        // dele x y cierra modal 
+        const closeModal = document.querySelector('.close');
+        closeModal.onclick = function () {
+            const modal = document.getElementById('employeeModal');
+            modal.style.display = 'none';
+        };
+
+        // al recargar la pagina comienza nueva info 
+        window.onload = loadSpanishEmployees;
+    </script>
+</body>
+
+</html>

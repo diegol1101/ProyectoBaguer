@@ -1,0 +1,12 @@
+C:\c#\ProyectoBaguer\Dominio\bin\Debug\net7.0\Dominio.deps.json
+C:\c#\ProyectoBaguer\Dominio\bin\Debug\net7.0\Dominio.dll
+C:\c#\ProyectoBaguer\Dominio\bin\Debug\net7.0\Dominio.pdb
+C:\c#\ProyectoBaguer\Dominio\obj\Debug\net7.0\Dominio.csproj.AssemblyReference.cache
+C:\c#\ProyectoBaguer\Dominio\obj\Debug\net7.0\Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\c#\ProyectoBaguer\Dominio\obj\Debug\net7.0\Dominio.AssemblyInfoInputs.cache
+C:\c#\ProyectoBaguer\Dominio\obj\Debug\net7.0\Dominio.AssemblyInfo.cs
+C:\c#\ProyectoBaguer\Dominio\obj\Debug\net7.0\Dominio.csproj.CoreCompileInputs.cache
+C:\c#\ProyectoBaguer\Dominio\obj\Debug\net7.0\Dominio.dll
+C:\c#\ProyectoBaguer\Dominio\obj\Debug\net7.0\refint\Dominio.dll
+C:\c#\ProyectoBaguer\Dominio\obj\Debug\net7.0\Dominio.pdb
+C:\c#\ProyectoBaguer\Dominio\obj\Debug\net7.0\ref\Dominio.dll
